@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+<fieldset>
+<img src=Csi_logo_india.jpg alt="DON BOSCO" width="150" height="150" align="right">
+<img src=DBIT.jpg width="150" height="150" align="left">
+<div style="background-color:lightblue;color:black;padding:20px">
+
+ <a class="ex2"> <h1 align="center">Don Bosco Institute Of Technology</h1>
+<h4 align="center">CSI Registration Form</h4> </a>
+
+</div></fieldset>
+<br>
+
+
+<style>
+body
+
+a.ex2:hover, a.ex1:active {text-decoration: underline;}
+
+h1 {
+    text-shadow: 3px 1px white;
+}
+
+
+h1 {
+    color: black;
+    text-align: center;
+}
+
+body { 
+margin-left: 20%;
+margin-right: 20%;
+    color: black;
+}
+
+table {
+margin-left: 20%;
+margin-right: 20%;
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 60%;
+}
+
+td, th {
+width: 50%;
+    border: 1px solid black;
+    text-align: left;
+    padding: 8px;
+}
+
+
+
+</style>
+
+<form name="myForm" id="myForm" action="dbconnect.php" method="post">
+<fieldset>
+<div style="color:black;padding:1px">
+ <a class="ex2"> <h1 align="center"><legend>Details:</legend></h1></a>
+</div>
+
+
+
+<table bgcolor="lightblue">
+  <tr>
+   <td> First Name:</td>
+	<td align="left"><input type="text" name="firstname" id="firstname" required></td>
+
+ </tr>
+<tr>
+   <td> Last Name:</td>
+	<td align="left"><input type="text" name="lastname" id="lastname" required></td>
+ </tr>
+  <tr>
+<td>Contact:</td>
+ <td align="left"><input type="tel" id="num" name="num" maxlength="10" required></td>
+</td>
+
+ <tr>
+   <td>Date:</td>
+<td align="left"><input id="date" type="date" name="date"required></td>
+ </tr>
+ <tr>
+<tr> 
+ <td>  Email-ID </td>  
+<td align="left"><input type="email" name="em"></td>
+   
+</tr>
+<tr>
+
+ <td> Department:</td> 
+<td>
+  <select name="dept">
+
+  <option value="it" >Information Technology</option>
+ 
+ <option value="comp">Computer Engineering</option>
+  
+<option value="extc">Electronic and Telecommunication</option>
+  
+<option value="mech">Mechanical Engineering</option>
+</select>
+</td>
+</tr>
+
+</form>
+</table>
+
+
+
+
+<center><button class="button" style="vertical-align:middle"><span>SUBMIT</span></button>
+
+<button class="button">RESET</button>
+
+
+</center>
+
+</div>
+
+</form>
+
+<script>
+  (function() {
+    ("#myform").validate({
+    
+        rules: {
+            firstname: "required",
+            lastname: "required",
+            username: "required",
+            email: {
+                required: true,
+                email: true
+            },
+           
+            date: {
+            	required: true,
+            	date: true
+            },
+            num:{
+            	required: true,
+            	mlength: 10,
+            	number: true
+            },
+            
+        },
+        
+        
+        messages: {
+            firstname: "Please enter your first name",
+            lastname: "Please enter your last name",
+            date:"Please enter a valid date",
+            num:{
+            	required: "Please enter a Number",
+            	minlength:"Must contain at least 10 digits"
+            }
+            email: "Please enter a valid email address",
+            
+        },
+        
+        submitHandler: function(form) {
+            form.submit();
+        }
+    });
+
+  });
+  
+ </script>
+
+</body>
+</html>
